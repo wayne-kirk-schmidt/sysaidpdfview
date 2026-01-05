@@ -46,18 +46,13 @@ This is not a packaged library yet to provide a simple solution.
 
 ```
 PDF
- │
- ▼
-inspect   → raw geometry, words, lines
- │
- ▼
-examine   → layout-driven key/value records (authoritative)
- │
- ▼
-display  → human or JSON views over extracted structure
+1. inspect 	- produces - raw geometry, words, lines
+2. examine   	- produces - layout-driven key/value records (authoritative)
+3. display      - produces - human or JSON views over extracted structure
 ```
 
 **Execution model:**  
+
 The pipeline is cumulative. Invoking a later verb automatically executes all 
 prior stages, but only the selected verb controls final output.
 
@@ -199,15 +194,38 @@ Because this is a script with local modules, run pylint as:
 pylint --init-hook='import sys; sys.path.insert(0, ".")' sysaidpdfview.py
 ```
 
----
+To Do List:
+===========
 
-## License
+* Add other format outputs.
+* turn this into a packaged module.
+* extend the CLI to handle processing in parallel using workers and queues.
 
-Apache 2.0
+License
+=======
 
----
+Copyright 2026 
 
-## Author
+* Wayne Kirk Schmidt (wayne.kirk.schmidt@gmail.com)
 
-Wayne Kirk Schmidt  
-ChangeIS K.K.
+Licensed under the Apache 2.0 License (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    license-name   Apache 2.0 
+    license-url    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Support
+=======
+
+Feel free to e-mail me with issues to: 
+
++   wayne.kirk.schmidt@gmail.com
+
+I will provide "best effort" fixes and extend the scripts.
